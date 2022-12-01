@@ -10,38 +10,22 @@
 </head>
 <body class='container'>
   
-  <h1 class='mt-5'>Minichat</h1>
+  <h1 class='mt-5'>Socket Server</h1>
   <hr/>
 
-  <form id="miFormulario">
-    <div class='row'>
-      <div class="col-8">
-        <input type="text" placeholder="Mensaje" id='textMensaje' class='form-control'/>
-      </div>
-
-      <div class='col-4'>
-        <button type='submit' class='btn btn-primary'>
-          Enviar
-        </button>
-      </div>
-    </div>
-  </form>
-
-  <div class="row">
-    <div class="col mt-2">
-      <ul id='misMensajes'>
-        <li>Hola</li>
-      </ul>
-    </div>
-  </div>
-
-
-
-
-
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
+    const socket = io('http://localhost:8080')
+    
+    
+    
+    
+    
+    
+    
+    /*
     const socket = io('https://socket-server-alexis.onrender.com/');
     // elementos del dom
     const formulario = document.getElementById('miFormulario');
@@ -57,10 +41,10 @@
         msg: nuevoMensaje
       });
     });
-
     socket.on('mensaje-from-server', (data) => {
       misMensajes.innerHTML += `<li>${data.msg}</li>`
     })
+    */
 
 
     /*socket.on('mensaje-bienvenida', (data) => {
